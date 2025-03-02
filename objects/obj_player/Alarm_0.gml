@@ -1,0 +1,1 @@
+sprite_index = sprite_idle; // Volta para a sprite de idle
