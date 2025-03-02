@@ -8,7 +8,7 @@ jump_force = -8; // Força do pulo
 inputs = {
     left : ord("A"),  // Tecla A para mover para a esquerda
     right : ord("D"), // Tecla D para mover para a direita
-    jump : ord("K")   // Tecla K para puld  dadaar
+    jump : ord("K")   // Tecla K para pular
 };
 grounded = false; // Verifica se o objeto está no chão
 

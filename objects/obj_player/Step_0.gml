@@ -39,6 +39,22 @@ if (_jump && grounded) {
     grounded = false; // Define como não estando no chão
 }
 
+// Verificar colisão vertical (para cima e para baixo)
+if (place_meeting(x, y + velv, obj_ground)) {
+    // Colisão abaixo (caindo no chão)
+    while (!place_meeting(x, y + sign(velv), obj_ground)) {
+        y += sign(velv); // Move o objeto pixel por pixel até a colisão
+    }
+    velv = 0; // Reseta a velocidade vertical
+    grounded = true; // Define como estando no chão
+} else if (place_meeting(x, y + velv, obj_ground)) {
+    // Colisão acima (subindo e atingindo um teto)
+    while (!place_meeting(x, y + sign(velv), obj_ground)) {
+        y += sign(velv); // Move o objeto pixel por pixel até a colisão
+    }
+    velv = 0; // Reseta a velocidade vertical
+}
+
 // Atualizar posição
 x += velh; // Movimento horizontal
 y += velv; // Movimento vertical
