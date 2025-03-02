@@ -18,6 +18,7 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
     {"name":"Eutolouco@gmail.com","order":10,"path":"folders/Sprites/Eutolouco@gmail.com.yy",},
+    {"name":"teste","order":16,"path":"folders/teste.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_enemy_right8","order":3,"path":"sprites/spr_enemy_right8/spr_enemy_right8.yy",},
