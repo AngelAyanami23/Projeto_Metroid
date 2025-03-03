@@ -12,8 +12,16 @@ if (place_meeting(x, y + velocidade_y, obj_ground)) {
     y += velocidade_y;
 }
 
-// Movimentação horizontal
-x += velocidade_x * direcao;
+// Verificar se há obj_ground abaixo antes de se mover horizontalmente
+var pode_mover = true;
+if (!place_meeting(x + (velocidade_x * direcao), y + 1, obj_ground)) {
+    pode_mover = false; // Não há chão abaixo, não pode se mover
+}
+
+// Movimentação horizontal (apenas se houver chão abaixo)
+if (pode_mover) {
+    x += velocidade_x * direcao;
+}
 
 // Verificar colisão horizontal com obj_wall
 if (place_meeting(x + (velocidade_x * direcao), y, obj_wall)) {
@@ -41,4 +49,8 @@ if (place_meeting(x + (velocidade_x * direcao), y, obj_ground)) {
         sprite_index = sprite_esquerda;
         image_xscale = -1;
     }
+}
+if (hp = 0)
+{
+	instance_destroy();
 }

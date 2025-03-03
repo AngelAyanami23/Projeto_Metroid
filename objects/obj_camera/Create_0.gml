@@ -1,3 +1,4 @@
+
 // Evento Create
 target = obj_player; // Define o alvo da câmera (o jogador)
 camera_speed = 1; // Velocidade de suavização da câmera (ajuste conforme necessário)
